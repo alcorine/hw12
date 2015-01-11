@@ -1,0 +1,638 @@
+// MINI RESET
+body
+  font 18px 'Open Sans', sans-serif
+  font-weight lighter
+
+ul
+  margin 0
+  padding 0
+
+li
+  list-style none
+
+a
+  text-decoration none
+
+h2, h5
+  margin 0
+  padding 0
+
+*
+  box-sizing border-box
+
+p
+  margin 0
+
+.b
+  font-weight bold
+
+//MIXIN
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+
+button-decor()
+  -webkit-transform rotateX(360deg)
+  -moz-transform rotateX(360deg)
+  -o-transform rotateX(360deg)
+  -ms-transform rotateX(360deg)
+  transform rotateX(360deg)
+
+
+button-mixin(padd, hex, bghex)
+  padding padd
+  color hex
+  background bghex
+  font-weight bold
+  text-align center
+  border none
+  border-radius(7px)
+  &:hover
+    button-decor()
+
+translate(x, y, z)
+  -webkit-transform translate3d(x, y, z)
+  -moz-transform translate3d(x, y, z)
+  -o-transform translate3d(x, y, z)
+  -ms-transform translate3d(x, y, z)
+  transform translate3d(x, y, z)
+
+
+img-mixin(arg)
+  -webkit-transform rotate(arg)
+  -moz-transform rotate(arg)
+  -o-transform rotate(arg)
+  -ms-transform rotate(arg)
+  transform rotate(arg)
+  -webkit-transition all 1.5s ease
+  -moz-transition all 1.5s ease
+  -o-transition all 1.5s ease
+  transition all 1.5s ease
+
+transition(property)
+  -webkit-transition property
+  -moz-transition property
+  -ms-transition property
+  -o-transition property
+  transition property
+
+img-hover-mix(arg)
+  -webkit-transform scale(arg)
+  -moz-transform scale(arg)
+  -o-transform scale(arg)
+  -ms-transform scale(arg)
+  transform scale(arg)
+  -webkit-transition all 1.5s ease
+  -moz-transition all 1.5s ease
+  -o-transition all 1.5s ease
+  transition all 1.5s ease
+  z-index 2
+
+// PROJECT
+.wrapper
+  overflow hidden
+  margin 0 auto
+  width 975px
+
+body
+  color #fff
+  background url("../img/header-bg.jpg")
+
+.foo-header
+  background url("../img/header-bg.jpg")
+
+.logo
+  float left
+  margin-top 30px
+  overflow hidden
+  display inline-block
+
+.services
+  margin 10px 0 20px 100px
+  display inline-block
+  li
+    list-style-image url("../img/dervices-list-img.png")
+    a
+      color #fff
+      font-size 13px
+    &:hover
+      font-weight bolder
+      text-decoration underline
+
+.our-contact
+  float right
+  display inline-block
+  color #fff
+  margin-top 20px
+
+.wrap
+  position relative
+  margin-right 10px
+  display inline-block
+  text-align right
+  line-height 20px
+  p
+    font-size 16px
+    &:first-child
+      margin-top 10px
+
+    span
+      font-size 22px
+      font-weight bold
+  .call-us
+    font-size 12px
+  &:before
+    content "- или -"
+    position absolute
+    display block
+    top 30%
+    right -50px
+    font-size 12px
+    color #62626b
+
+.contact-button
+  float right
+  width 160px
+  font-size 15px
+  margin-left 50px
+  button-mixin(15px 0, #fff, #e35353)
+  transition(2s)
+  box-shadow(0px 8px 0px #c74848)
+
+.entry
+  position relative
+  color #fff
+  background url("../img/entry-bg.jpg") no-repeat fixed
+  background-size cover
+  box-shadow()
+
+.entry-item
+  float left
+  padding 60px 0
+  h2
+    font-size 36px
+    text-transform uppercase
+  ul
+    padding-left 30px
+    font-size 25px
+    li
+      list-style-image url("../img/list-img.png")
+  p
+    font-size 32px
+    text-transform uppercase
+  a
+    color #fff
+    font-weight bold
+    display inline-block
+    margin-top 50px
+    padding 20px
+    border 1px solid #fff
+    border-radius(7px)
+    &:hover
+      opacity 1
+
+.word-decoration
+  background #f5e525
+  color #000
+  padding 0 10px
+
+.consultation, .spamming
+  width 360px
+  float right
+  background rgba(20,23,78,.8)
+  margin 40px 0
+  border-radius(7px)
+  text-align center
+  h4
+    text-transform uppercase
+    width 200px
+    font-size 23px
+    display inline-block
+  form
+    margin-bottom 40px
+    input
+      color #000000
+      font-weight bolder
+      border 0
+      border-radius(7px)
+      padding 0 15px
+      margin 5px 0
+      width 270px
+      height 55px
+      opacity 0.65
+      &:focus
+        opacity 1
+    input[type="submit"]
+      opacity 1
+      button-mixin(0 15px, #000, #f5e525)
+      transition(2s)
+      box-shadow(0px 8px 0px #d2c30d)
+
+
+.hot-deals
+  padding 80px 0
+  box-shadow(inset 0 -5px 10px rgba(8,9,36,0.5))
+  h2
+    text-align center
+    text-transform uppercase
+    span
+      font-weight lighter
+      text-transform uppercase
+      display block
+      text-align center
+      margin-bottom 50px
+
+
+#items
+  /*margin 0 auto*/
+  text-align center
+  overflow hidden
+.item-list
+  margin 0 20px
+  width 263px
+  height 355px
+  float left
+  display list-item
+  border 4px solid #2f304b
+  border-radius(8px)
+  h1
+    min-height 45px
+    font-size 17px
+    display inline-block
+    vertical-align middle
+  .price
+    margin-bottom  10px
+    li
+      line-height 40px
+      display inline-block
+      &:first-child
+        font-size 25px
+        color #e35353
+        font-weight bold
+  a
+    border-radius(7px)
+    button-mixin(10px 15px, #000, #f5e525)
+    transition(2s)
+    box-shadow(0px 7px 0px #d2c30d)
+
+.container
+  position relative
+  width 950px
+  margin 0 auto
+
+.pagination
+  margin-top 40px
+  text-align center
+  li
+    display inline-block
+    margin-right 10px
+    text-indent -8000px
+    background url("../img/active-pages.png") no-repeat
+    opacity 0.65
+    width 19px
+    height 19px
+  .current
+    background url("../img/active-pages.png")
+    opacity 1
+  .next
+    background url("../img/slider-next.png") no-repeat
+    position absolute
+    top 20%
+    text-indent -8000px
+    right -90px
+    height 190px
+    width 130px
+  .prev
+    background url("../img/slider-prev.png") no-repeat
+    position absolute
+    top 20%
+    text-indent -8000px
+    left -60px
+    height 190px
+    width 130px
+
+.support
+  position relative
+  width 100%
+  background fixed url("../img/consultation-bg.jpg") no-repeat
+  background-size cover
+  padding 90px 0 0 0
+
+.question
+  text-align center
+  display inline-block
+  width 49%
+  height 430px
+  background url("../img/question.png") no-repeat
+  background-size contain
+  background-position 100% 50%
+  ul
+    margin-top 20px
+    li
+      line-height 50px
+      text-indent -9000px
+  p
+    font-size 26px
+    padding 10px 30px
+    display inline-block
+    text-transform uppercase
+    font-weight bold
+    background #e35353
+
+.answer
+  text-align center
+  display block
+  float right
+  width 49%
+  background-position 100% 50%
+  .answer-title
+    font-size 26px
+    padding 10px 30px
+    display inline-block
+    text-transform uppercase
+    font-weight bold
+    background #f5e525
+  .answer-content
+    background url("../img/answer.png") no-repeat
+    background-size contain
+    padding 30px 0 150px 0
+    margin-top 20px
+    text-align center
+    span
+      display block
+    p
+      margin-bottom 30px
+    a
+      margin-top 20px
+      button-mixin(15px 15px, #000, #f5e525)
+      transition(2s)
+      box-shadow(0px 8px 0px #d2c30d)
+
+.why-choose-us
+  color #000
+  text-align center
+  padding 90px 0
+  background url("../img/choose-bg.jpg") no-repeat
+  background-size cover
+  h2
+    text-align center
+    text-transform uppercase
+
+.advantages-title
+  margin 0
+  font-size 26px
+  background url("../img/advantages-title-bg.png") no-repeat
+  background-position center
+  line-height 100px
+  text-align center
+  span
+    font-weight bold
+    display block
+    -webkit-transform rotate(-8deg)
+    -moz-transform rotate(-8deg)
+    -o-transform rotate(-8deg)
+    transform rotate(-8deg)
+
+.advantages
+  margin-top 20px
+  text-align center
+  overflow hidden
+  width 100%
+  li
+    text-align left
+    display inline-block
+    width 49%
+    margin-bottom 25px
+    h5
+      margin-bottom 10px
+      overflow hidden
+      font-size 20px
+    p
+      font-weight normal
+      overflow hidden
+      font-size 16px
+
+.img-container
+  box-shadow(8px 4px 0px rgba(0, 0, 0, 0.15))
+  position relative
+  width 145px
+  height 145px
+  float left
+  display block
+  background #e35353
+  border-radius(15px)
+  margin-right 20px
+  img
+    position absolute
+    top 0
+    right 0
+    left 0
+    bottom 0
+    margin auto
+  &:hover
+    translate(8px, 4px, -5px)
+    box-shadow(none)
+    transition(1s)
+
+
+.israel-holiday
+  overflow hidden
+  background url("../img/izr-turist-bg.jpg") no-repeat
+  background-size cover
+  padding 80px 0
+  h2
+    text-align center
+    text-transform uppercase
+  span
+    display block
+    font-weight lighter
+    text-align center
+    text-transform uppercase
+
+.israel-photo
+  list-style none
+  width 100%
+  height auto
+  padding 0
+  margin 50px 0 70px 0
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
+  display flex
+  -webkit-flex-flow row wrap
+  justify-content flex-start
+  li
+    width: 15%
+    margin-left 2%
+    .photo-container
+      width 100%
+      overflow hidden
+      img
+        display block
+        width 100%
+        height auto
+        border-radius(5px)
+        box-shadow (5px 5px 0 rgba(0, 0, 0, .5))
+    &:nth-child(2n)
+      img-mixin(5deg)
+    &:nth-child(2n+1)
+      img-mixin(-5deg)
+    &:hover
+      img-mixin(0deg)
+      transition(2s)
+      img-hover-mix(1.25)
+    &:first-child
+      margin-left 0
+
+.about-israel
+  display inline-block
+  width 600px
+  .text-container
+    background url("../img/border-text.jpg")no-repeat
+    padding 40px 50px 80px 40px
+
+.israel-holiday-form
+  float right
+  margin-top 30px
+  width 360px
+  text-align center
+  h4
+    margin-bottom 10px
+    font-size 23px
+    text-transform uppercase
+  p
+    line-height 20px
+    span
+      font-weight bold
+      text-transform none
+      margin-bottom 30px
+  form
+    input
+      color #000000
+      font-weight bolder
+      border 0
+      border-radius(7px)
+      padding 0 15px
+      margin 5px 0
+      width 270px
+      height 55px
+      opacity 0.65
+      &:focus
+        opacity 1
+    input[type="submit"]
+      opacity 1
+      button-mixin(0 15px, #000, #f5e525)
+      transition(2s)
+      box-shadow(0px 8px 0px #d2c30d)
+
+.israel-present
+  position relative
+  background fixed url("../img/israel-present-bg.jpg")no-repeat
+  background-size cover
+  padding 100px 0
+  width 100%
+  box-shadow(inset 0 -5px 10px rgba(8,9,36,0.5))
+  p
+    color #fff
+    font-weight bold
+    font-size 41px
+    text-transform uppercase
+    line-height 60px
+    .text-decor1
+      font-weight lighter
+      display block
+      font-size 33px
+    .text-decor2
+      padding 5px 10px
+      background #d85456
+    .text-decor3
+      font-size 30px
+    .text-decor4
+      padding 5px 10px
+      background #d85456
+      font-size 30px
+    .block
+      display block
+      margin-top 20px
+
+.feedback
+  padding 80px 0 0 0
+  h4
+    text-align center
+    text-transform uppercase
+    margin 0
+    font-size 28px
+  p
+    font-size 23px
+    text-transform uppercase
+    text-align center
+
+.review-client
+  margin-top 20px
+  text-align center
+  overflow hidden
+  width 100%
+  li
+    text-align left
+    display inline-block
+    width 47%
+    margin 0 20px 80px 0
+    overflow hidden
+    min-height 350px
+    p
+      font-size 16px
+      text-transform none
+      text-align left
+      overflow hidden
+    .fb-img-container
+      display inline-block
+      position relative
+      float left
+      margin-right 15px
+      &:before
+        content ""
+        position absolute
+        display block
+        width 100%
+        height 100%
+        background url("../img/feedback-client-effect.png")no-repeat
+        background-size contain
+        left 50%
+        bottom -90%
+.city
+  font-size 15px
+  margin-bottom 15px
+
+.footer
+  position relative
+  color #fff
+  background url("../img/entry-bg.jpg") no-repeat fixed
+  background-size cover
+
+.footer-list
+  width 500px
+  margin 80px 0
+  display inline-block
+  .footer-title
+    text-transform uppercase
+    font-size 35px
+    font-weight bold
+    .qwe
+      font-size 30px
+      font-weight lighter
+    .qwr
+      background #f5e525
+      color #000
+      padding 0 10px
+  .footer-content
+    font-weight lighter
+    font-size 22px
+    margin-top 50px
+    padding-right 50px

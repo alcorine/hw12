@@ -1,4 +1,317 @@
-%ul
-  %li
+!!!
 
+%head{lang:"en"}
+  %meta{charset:"UTF-8"}/
+  %title Alfa Travel
+  %link{href:"style/normallize.css", rel:"stylesheet"}/
+  %link{href:"style/main.css", rel:"stylesheet"}/
+  %script{src:"js/jquery-1.4.2.min.js", type:"text/javascript"}
+  %script{src:"js/easypaginate.js", type:"text/javascript"}
+  :javascript
+      jQuery(function($){
+
+        $('ul#items').easyPaginate({
+        step:3
+        });
+
+      });
+
+%body
+  %header.header
+    .wrapper
+      %a{class:"logo",href:"#"}
+        %img{src:"img/logo.png", alt:"Alfa Travel"}/
+      %ul.services
+        %li
+          %a{href:"#"} Туры в Израиль
+        %li
+          %a{href:"#"} Билеты
+        %li
+          %a{href:"#"} Гостиницы
+      .our-contact
+        .wrap
+          %p
+            +7(495)
+            %span{class:"phone-numb"} 374-79-54
+          %p{class:"call-us"} Мы ждем Ваши звонки!
+        %a{class:"contact-button", href:"#"} Заказать звонок!
+  %section.entry
+    .wrapper
+      .entry-item
+        %h2
+          собираетесь
+          %span.word-decoration в израиль?
+        %p
+          %span.b AlfaTravel
+          поможет
+        %ul
+          %li Организованные туры
+          %li Билеты и гостиницы
+          %li Экскурсии
+          %li Медицинский туризм
+        %a{href:"#"} Популярные туры
+      .consultation
+        %h4 Бесплатная консультация
+        %form{name:"consultation", method:"post", action:"#"}
+          %input{type:"text", placeholder:"Имя"}
+          %input{type:"email", placeholder:"E-mail"}
+          %input{type:"tel", placeholder:"Телефон"}
+          %input{type:"submit", value:"Перезвоните мне!"}
+  %section.hot-deals
+    %h2
+      Самые горячия предложения
+      %span
+        этого сезона!
+
+    %ul#items
+      %li.item-list
+        %img{src:"img/hot-deals-list1.png", alt:""}
+        %h1 Новогодний ужин
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list2.png", alt:""}
+        %h1 Осень на пляжах Эйлата
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list3.png", alt:""}
+        %h1 Иерусалим - город трех религий
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list3.png", alt:""}
+        %h1 Иерусалим - город трех религий
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list1.png", alt:""}
+        %h1 Новогодний ужин
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list2.png", alt:""}
+        %h1 Осень на пляжах Эйлата
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list1.png", alt:""}
+        %h1 Новогодний ужин
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list3.png", alt:""}
+        %h1 Иерусалим - город трех религий
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+      %li.item-list
+        %img{src:"img/hot-deals-list2.png", alt:""}
+        %h1 Осень на пляжах Эйлата
+        %ul.price
+          %li $954
+          %li /
+          %li 8 дней
+        %a{href:"#"}Подробнее!
+
+  %section.support
+    .wrapper
+
+      .question
+        %p У вас есть вопросы?
+        %ul
+          %li Где взять билеты?
+          %li Сопровождение
+          %li Какой отель?
+          %li Экскурсии?
+          %li Виза?
+          %li Трансфер?
+      .answer
+        %p.answer-title У нас есть ответы!
+        .answer-content
+          %p
+            Получите
+            %span.b подробную консультацию
+            по любому вопросу
+          %a{href:"#"} Расскажите нам!
+  %section.why-choose-us
+    .wrapper
+      %h2 Почему именно мы?
+      %p.advantages-title
+        %span Преимущества
+      %ul.advantages
+        %li
+          .img-container
+            %img{src:"img/choose-list.png", alt:""}
+          %h5
+            Отсутствие
+            %br посредников
+          %p Как следствие – удешевление как полного туристического пакета, так и каждой составляющей.
+        %li
+          .img-container
+            %img{src:"img/choose-list2.png", alt:""}
+          %h5 Полная прозрачность договорных отношений
+          %p Вы всегда знаете и понимаете, за что и сколько Вы платите. Мы - за честное сотрудничество!
+        %li
+          .img-container
+            %img{src:"img/choose-list3.png", alt:""}
+          %h5 Исчерпывающая и всегда оперативная информация
+          %p Мы заботимся о том, чтобы сформировать у наших клиентов полное представление об услгуге, которой они пользуются.
+        %li
+          .img-container
+            %img{src:"img/choose-list4.png", alt:""}
+          %h5 Личное сопровождение клиента
+          %p Наши сотрудники встречают и провожают Вас по прибытию в Израиль, чтобы сделать Вашу поездку особенной!
+  %section.israel-holiday
+    %h2
+      Израиль глазами наших клиентов
+      %span Незабываемый отдых!
+    %ul.israel-photo
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+      %li
+        .photo-container
+          %img{src:"img/izrail-turist.jpg", alt:""}
+    .wrapper
+      .about-israel
+        .text-container
+          %p
+            Израиль – страна туристическая, привлекающая многочисленных путешественников из-за рубежа.
+            Несмотря на то, что площадь Израиля составляет чуть более 22 тыс. кв.км, на узкой полоске земли вдоль Средиземного моря успешно развиваются различные виды туризма,
+            как общего, так и специфического – религиозного, медицинского, сельскохозяйственного и прочих.
+        .text-container
+          %p
+            Мы предлагаем туры в Израиль, предоставляя своим клиентам услуги высокого качества, в полном соответствии с любыми особыми требованиями.
+            Важно отметить, что наши туры в Израиль проводятся без посредников, что существенно сказывается на их стоимости.
+            За три года работы на туристическом рынке компания Alfa Travel приобрела устойчивую репутацию надежного партнера.
+      .israel-holiday-form
+        %h4
+          Хотите провести незабываемый отдых?
+        %p
+          Давайте поговорим о наиболе выгодных и интересных предложениях
+          %span лично для Вас!
+        %form{name:"unforget-holl", method:"post", action:"#"}
+          %input{type:"text", placeholder:"Имя"}
+          %input{type:"email", placeholder:"E-mail"}
+          %input{type:"tel", placeholder:"Телефон"}
+          %input{type:"submit", value:"Перезвоните мне!"}
+  %section.israel-present
+    .wrapper
+      %p.text-list
+        %span.text-decor1 Позвольте нам
+        %span.text-decor2 показать израиль
+        таким,
+        %span.block
+          %span.text-decor3 каким вы его себе
+          %span.text-decor4 представляли!
+  %section.feedback
+    .wrapper
+      %h4 О нас говорят
+      %p отзывы наших клиентов
+      %ul.review-client
+        %li
+          .fb-img-container
+            %img{src:"img/feedback-client-img.png", alt:""}
+          %p.b Ирина и Валерий Корсунковы
+          %p.city Воронеж
+          %p
+            Хотим поблагодарить сотрудников Alfa Travel за прекрасный отдых в Израиле. За неделю мы увидели много прекрасных мест, воспоминания останутся на всю жизнь.
+            Особо хотим отметить профессионализм гида Бориса, который показал нам Иерусалим, самый прекрасный город в Мире! Мы еще приедем!
+        %li
+          .fb-img-container
+            %img{src:"img/feedback-client-img2.png", alt:""}
+          %p.b Валентина Скорик
+          %p.city Львов
+          %p
+            Мы привезли маму на лечение в Израиль. Но выдалось несколько свободных дней, и мы заранее договорились с компанией Alfa Travel, что нам предоставят экскурсии. Все было замечательно – работники фирмы приняли во внимание, что экскурсия предназначена для человека, проходящего сложное лечение.
+            Мама отвлеклась, ее восхитили красоты Израиля, его прекрасные люди, которые нас сопровождали. Спасибо.
+        %li
+          .fb-img-container
+            %img{src:"img/feedback-client-img3.png", alt:""}
+          %p.b Виктор Серебро
+          %p.city Екатеринбург
+          %p
+            Спасибо Alfa Travel за отличную организацию поездки в Израиль. Были учтены все пожелания, если была необходимо помощь, мы могли в любой момент позвонить ребятам, и они решали наши проблемы.
+            Следующий приезд – только с Alfa Travel.
+        %li
+          .fb-img-container
+            %img{src:"img/feedback-client-img4.png", alt:""}
+          %p.b Николай Трофимович Кротов
+          %p.city Алма-Ата
+          %p
+            Отдельное спасибо за хлопоты по получению визы. Мы пожилые люди, нам бы это было трудно физически, а работники Alfa Travel взяли на себя все заботы.
+            Спасибо вам!
+  %footer.footer
+    .wrapper
+      .footer-list
+        %p.footer-title
+          %span.qwe Вы готовы подарить себе
+          %span.qwr Незабываемый
+          отдых?
+        %p.footer-content
+          Тогда смелее
+          %span.b заполняйте форму
+          справа и уже сегодня у Вас на руках будет вся информация о
+          %span.b путешествии Вашей мечты!
+      .spamming
+        %h4 Хочу узнать о скидках и акциях!
+        %form{name:"spamming", method:"post", action:"#"}
+          %input{type:"text", placeholder:"Имя"}
+          %input{type:"email", placeholder:"E-mail"}
+          %input{type:"tel", placeholder:"Телефон"}
+          %input{type:"submit", value:"Перезвоните мне!"}
+    .foo-header
+      .wrapper
+        %a{class:"logo",href:"#"}
+          %img{src:"img/logo.png", alt:"Alfa Travel"}/
+        %ul.services
+          %li
+            %a{href:"#"} Туры в Израиль
+          %li
+            %a{href:"#"} Билеты
+          %li
+            %a{href:"#"} Гостиницы
+        .our-contact
+          .wrap
+            %p
+              +7(495)
+              %span{class:"phone-numb"} 374-79-54
+            %p{class:"call-us"} Мы ждем Ваши звонки!
+          %a{class:"contact-button", href:"#"} Заказать звонок!
 
